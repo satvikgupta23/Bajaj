@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bajaj-bfhl
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: USER_ID
+        value: Satvik Gupta_23082005
+      - key: EMAIL_ID
+        value: sg9820@srmist.edu.in
+      - key: COLLEGE_ROLL_NUMBER
+        value: RA2311028010071

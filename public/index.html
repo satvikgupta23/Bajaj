@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFHL Hierarchy Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">SRM Full Stack Challenge</p>
+        <h1>Hierarchy Intelligence Console</h1>
+        <p class="subtitle">
+          Enter edges (one per line like <strong>A-&gt;B</strong>) and inspect trees,
+          cycles, duplicates, and summary insights in one view.
+        </p>
+      </section>
+
+      <section class="panel">
+        <label for="nodesInput">Node Entries</label>
+        <textarea id="nodesInput" rows="10" spellcheck="false">A->B
+A->C
+B->D
+C->E
+E->F
+X->Y
+Y->Z
+Z->X
+P->Q
+Q->R
+G->H
+G->H
+G->I
+hello
+1->2
+A-></textarea>
+        <button id="submitBtn" type="button">Submit to /bfhl</button>
+        <p id="status" class="status"></p>
+      </section>
+
+      <section id="responseSection" class="response hidden">
+        <h2>API Response</h2>
+        <pre id="jsonOutput" class="json-output"></pre>
+        <div id="summaryCards" class="cards"></div>
+        <div id="hierarchyCards" class="cards"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
